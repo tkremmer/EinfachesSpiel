@@ -1,12 +1,13 @@
 import javax.swing.*;
 
 public class GewinnView extends JFrame {
-    public GewinnView() {
+    GewinnPanel panel;
+    public GewinnView(GewinnController c) {
         setTitle("Spiel");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500, 300);
 
-        GewinnPanel panel = new GewinnPanel();
+        panel = new GewinnPanel(c);
         add(panel);
 
         setVisible(true);
