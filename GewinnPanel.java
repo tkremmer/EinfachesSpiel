@@ -1,5 +1,7 @@
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.*;
 
@@ -12,13 +14,15 @@ public class GewinnPanel extends JPanel {
        new JTextField(),    
     };
 
+    JButton btn = new JButton("Noch einmal!");
+
+
     
     public GewinnPanel(GewinnController c) {
         setLayout(new BorderLayout());
         
         JPanel input = new JPanel(new GridLayout(4, 2));
 
-        JButton btn = new JButton("Noch einmal!");
         btn.addActionListener(c);
         btn.setActionCommand("nochmal");
 
@@ -32,6 +36,12 @@ public class GewinnPanel extends JPanel {
         input.add(new JLabel("Computer:"));
         
 
+        for (JTextField f : fields) {
+            f.setEditable(false);
+            f.setForeground(Color.BLACK);
+            f.setFont(new Font("Arial", Font.BOLD, 20));
+        }
+        fields[2].setEditable(true);
         fields[2].addActionListener(c);
         fields[2].setActionCommand("enter");
         input.add(fields[2]);

@@ -10,7 +10,7 @@ public class GewinnModel {
     public GewinnModel() {
         gesamtPunkte = 30;
     }
-    
+            
     public int getGesamtPunkte() {
         return gesamtPunkte;
     }
@@ -25,7 +25,7 @@ public class GewinnModel {
 
     public void berechneComputerZahl() {
         Random rand = new Random();
-        computerZahl = rand.nextInt(0, 10);
+        computerZahl = rand.nextInt(1, 10);
     }
 
     public void berechneRunde(int spielerZahl) {
