@@ -48,7 +48,11 @@ public class GewinnPanel extends JPanel {
         input.add(fields[3]);
 
         add(input, BorderLayout.CENTER);
-        add(btn, BorderLayout.SOUTH);
+
+        JPanel btnPanel = new JPanel();
+        btnPanel.add(btn);
+
+        add(btnPanel, BorderLayout.SOUTH);
     }
 
     public void setField(int i, String text) {
