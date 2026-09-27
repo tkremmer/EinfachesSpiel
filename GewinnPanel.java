@@ -38,7 +38,7 @@ public class GewinnPanel extends JPanel {
 
         for (JTextField f : fields) {
             f.setEditable(false);
-            f.setForeground(Color.RED);
+            f.setForeground(Color.BLACK);
             f.setFont(new Font("Arial", Font.BOLD, 20));
         }
         fields[2].setEditable(true);
